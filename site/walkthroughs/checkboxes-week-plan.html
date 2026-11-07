@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walkthrough — A Weekly Plan with Checkboxes — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html" aria-current="page">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Walkthrough — A Weekly Plan with Checkboxes</h1>
+<p>Build a real weekly plan in Markdown, from empty file to ticking
+boxes. Ten minutes, start to finish. Use any plain-text editor.</p>
+<h2>Step 1 — The skeleton</h2>
+<p>Create <code>week.md</code> and start with the title and two headings:</p>
+<pre><code class="language-markdown"># Week of ____
+
+## Must do
+## Nice to have
+</code></pre>
+<h2>Step 2 — Your first checkbox list</h2>
+<p>Under <code>## Must do</code>, add three open boxes:</p>
+<pre><code class="language-markdown">- [ ] Pay electric bill
+- [ ] 20 minutes on resume
+- [ ] Refill prescriptions
+</code></pre>
+<p><strong>Rule of thumb:</strong> max 3 "must" boxes per day-tier. More than that
+and it's a guilt pile, not a plan.</p>
+<h2>Step 3 — Break one big task down</h2>
+<p>"Resume" is really five tasks. Nest sub-boxes, indented 2 spaces:</p>
+<pre><code class="language-markdown">- [ ] 20 minutes on resume (timer on)
+  - [ ] List last 3 jobs
+  - [ ] Write 2 bullet points for each
+  - [ ] Save as resume-draft.md
+</code></pre>
+<h2>Step 4 — Add duplicates and a notes line</h2>
+<p>Some tasks repeat. Just add another box — Markdown doesn't care:</p>
+<pre><code class="language-markdown">- [ ] Water fern — Mon
+- [ ] Water fern — Thu
+</code></pre>
+<p>Or use one line and a small inline code note for strength details:</p>
+<pre><code class="language-markdown">- [ ] Push-ups — 3 sets of 10
+</code></pre>
+<h2>Step 5 — The "done" side</h2>
+<p>During the week, flip boxes and <em>leave them</em>:</p>
+<pre><code class="language-markdown">- [x] Pay electric bill
+- [ ] 20 minutes on resume (timer on)
+</code></pre>
+<p>The <code>[x]</code> items are your completed record. Don't delete them at
+week's end — copy them into a "done" section first:</p>
+<pre><code class="language-markdown">## Done this week
+- [x] Pay electric bill
+- [x] Texted landlord
+</code></pre>
+<h2>Step 6 — Roll open items forward</h2>
+<p>On Sunday, make next week's plan: carry over each unchecked <code>- [ ]</code>
+box. Anything left three weeks running is either too big (split it!)
+or not actually wanted (delete it, guilt-free).</p>
+<h2>Full example file</h2>
+<pre><code class="language-markdown"># Week of Nov 3
+
+## Must do
+- [x] Pay electric bill
+- [ ] 20 minutes on resume (timer on)
+  - [ ] List last 3 jobs
+  - [ ] Write 2 bullets per job
+- [ ] Refill prescriptions
+
+## Nice to have
+- [ ] Water fern — Mon
+- [ ] Water fern — Thu
+- [ ] Chess puzzle set
+
+## Done this week
+- [x] Pay electric bill
+</code></pre>
+<h2>Variations to try</h2>
+<ul>
+<li><strong>Three-box day:</strong> in a daily file, copy just 3 must-boxes. Reset
+  tomorrow.</li>
+<li><strong>Body doubling:</strong> share the file with a friend; watching each
+  other's <code>[x]</code> marks accumulate keeps both of you going.</li>
+<li><strong>Table hybrid:</strong> add a small table at the bottom for numbers you
+  kept — calorie counts, weights, or money spent.</li>
+</ul>
+<p>When you're ready for the second walkthrough, head to
+<a href="table-gear-inventory.html">table-gear-inventory.md</a>.</p></article>
+<nav class="pager"></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

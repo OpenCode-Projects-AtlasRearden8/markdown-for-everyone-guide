@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 8 — Quotes, Code, Horizontal Rules, and Escaping — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Lesson 8 — Quotes, Code, Horizontal Rules, and Escaping</h1>
+<p>A grab-bag of finishing touches. Small tools, but they show up
+constantly in notes, READMEs, and documentation.</p>
+<h2>Blockquotes: for borrowed words and warnings</h2>
+<p>Start lines with <code>&gt;</code> (greater-than, space):</p>
+<pre><code class="language-markdown">&gt; Not everything that counts can be counted.
+&gt; — often credited to Albert Einstein
+</code></pre>
+<blockquote>
+<p>Not everything that counts can be counted.
+— often credited to Albert Einstein</p>
+</blockquote>
+<p>Great for: quotes, pull-out warnings in guides, answers in study
+notes. Consecutive <code>&gt;</code> lines stay one quote; a blank line ends it.</p>
+<h2>Code: inline and fenced</h2>
+<p><strong>Inline code</strong> — single backticks for a word or two:</p>
+<pre><code class="language-markdown">Press `Ctrl+S` to save, or run `npm install`.
+</code></pre>
+<p>Renders: Press <code>Ctrl+S</code> to save, or run <code>npm install</code>.</p>
+<p><strong>Fenced code</strong> — triple backticks around a block:</p>
+<pre><code>```text
+Project tree:
+
+my-project/
+├── README.md
+├── docs/
+└── images/
+```
+</code></pre>
+<p>Fenced blocks keep every space and line break exactly as typed —
+that's why we've used them all through this guide to <em>show</em> you
+Markdown without rendering it.</p>
+<p><strong>Formatting a block of existing text:</strong> in VS Code, Obsidian, or
+GitHub's editor, select the lines and press backtick three times or
+use the language button — faster than typing fences manually.</p>
+<h2>Horizontal rules: for "chapter break" moments</h2>
+<p>Three hyphens on their own line (blank lines above and below):</p>
+<pre><code class="language-markdown">---
+
+New section below the line.
+</code></pre>
+<p>Use sparingly — a <code>##</code> heading usually does the job better. Two or
+three rules per document is plenty.</p>
+<h2>Escaping: when Markdown eats your punctuation</h2>
+<p>Sometimes you <em>want</em> people to see a literal <code>*</code> or <code>#</code>. Put a
+backslash in front:</p>
+<pre><code class="language-markdown">\* Not a bullet, just a star
+\# Not a heading, just a hash
+\_ Not italics
+</code></pre>
+<p>Renders as: * Not a bullet, just a star</p>
+<p>The characters that need escaping most often: <code>`</code>, <code>*</code>, <code>_</code>,
+<code>#</code>, <code>[</code>, <code>]</code>.</p>
+<h2>Try it now</h2>
+<ol>
+<li>Quote one sentence from a book you like.</li>
+<li>Put your keyboard's Save shortcut in inline code.</li>
+<li>Write a fenced block holding a tiny folder tree.</li>
+<li>Escape one <code>*</code> so it shows up as a star.</li>
+</ol>
+<p>Next lesson: <a href="09-real-life-documents.html">Real-life documents</a>.</p></article>
+<nav class="pager"><span>&larr; <a href="../lessons/07-links-and-images.html">previous</a></span><span><a href="../lessons/09-real-life-documents.html">next</a> &rarr;</span></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

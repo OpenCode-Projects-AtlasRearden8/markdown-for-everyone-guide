@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 9 — Real-Life Documents: Putting It Together — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Lesson 9 — Real-Life Documents: Putting It Together</h1>
+<p>Everything from Lessons 1–8, used for documents you'll actually want.
+Copy these templates and change the words.</p>
+<h2>Document: Weekly plan (checkboxes)</h2>
+<pre><code class="language-markdown"># Week of Nov 3
+
+## Must do
+- [x] Pay electric bill
+- [ ] Return library books
+- [ ] 30 minutes on resume
+
+## Should do
+- [ ] Meal prep chili
+- [ ] Text Mom back
+
+## If energy allows
+- [ ] Sort eBay listings
+- [ ] Chess puzzle set
+</code></pre>
+<p>Two lists, three energy tiers, twelve boxes. Everything from Lessons
+3, 4, and 5 in action — done after breakfast most mornings.</p>
+<h2>Document: Resume (draft in Markdown, export later)</h2>
+<pre><code class="language-markdown"># Dylan Asdale
+Nurse, AI author, and founder of ASDALE DYNAMICS, LLC
+
+dylan@example.com · Indianapolis, IN
+
+## Experience
+
+**Founder, Asdale Dynamics, LLC** — 2026–present
+Publish beginner-friendly AI guides in plain English.
+
+**Registered Nurse** — 2015–2026
+Championed charting standards and patient education.
+
+## Skills
+
+- Plain-language technical writing
+- Patient and staff education
+- Local-first AI workflows
+
+## Education
+
+**ADN, Nursing** — community college, 2014
+</code></pre>
+<p>There are Markdown-to-PDF converters for finished resumes; the draft
+stage is where Markdown shines. Never put a home address on a resume
+you share online — use city and state at most.</p>
+<p><em>Styled headings (<code>##</code>) and bullets read cleanly for reviewers; many
+job posts accept <code>.txt</code>, so a Markdown resume copy-pastes well.</em></p>
+<h2>Document: README (the cover page of a project)</h2>
+<p>Every GitHub repository looks for a file named <code>README.md</code> and shows
+it on the front page. The skeleton:</p>
+<pre><code class="language-markdown"># Project Name
+
+One sentence: what this does and for whom.
+
+## Quick start
+1. Download the file
+2. Open it
+
+## How it works
+Brief explanation, maybe a table.
+
+## License
+MIT — see [LICENSE](../LICENSE).
+</code></pre>
+<p>See the full worked example in the
+<a href="../walkthroughs/table-gear-inventory.html">tables walkthrough</a>, which
+builds a README plus a small-business gear table from scratch.</p>
+<h2>Document: Simple doc / FAQ</h2>
+<pre><code class="language-markdown"># How to refill the coffee machine
+
+## Steps
+1. Pull the drawer out.
+2. Dump the old grounds.
+3. Add three scoops.
+
+## Troubleshooting
+| Problem | Likely cause | Fix |
+| ------- | ------------ | --- |
+| Drips slowly | Old grounds | Rinse basket |
+| No power | Plug loose | Push plug in |
+</code></pre>
+<p>Note the anatomy of every good FAQ: steps first, then a table keyed
+by symptom. A reader with a problem gets an <em>answer</em>, not an essay.</p>
+<h2>Your starter kit</h2>
+<p>You now have every convention in use wherever Markdown lives:</p>
+<ul>
+<li><code>#</code> headings, blank-line paragraphs</li>
+<li><code>**bold**</code>, <code>*italic*</code>, <code>~~struck~~</code></li>
+<li><code>- lists</code>, <code>1. order</code>, <code>nesting</code></li>
+<li><code>- [ ] / [x]</code> checkboxes</li>
+<li><code>| tables |</code> with dividers</li>
+<li><code>[links](places)</code>, <code>![alt](images)</code></li>
+<li><code>&gt; quotes</code>, <code>`code`</code>, fences, <code>---</code> rules, <code>\* escaping</code></li>
+</ul>
+<p>Everything else — footnotes, math, definition lists — is an
+extension for special renderers, and you can pick it up anytime.</p>
+<p>The <a href="../cheat-sheet.html">cheat sheet</a> is your one-page companion. Print
+it, tape it up, stop needing it in a week. Then check the
+<a href="../common-mistakes.html">common mistakes gallery</a> when something
+renders sideways.</p></article>
+<nav class="pager"><span>&larr; <a href="../lessons/08-quotes-code-and-extras.html">previous</a></span><span><a href="../cheat-sheet.html">next</a> &rarr;</span></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 6 — Tables: Track Anything in a Grid — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Lesson 6 — Tables: Track Anything in a Grid</h1>
+<p>Tables are Markdown's superpower for messy details: budgets, gear
+inventories, medicine schedules, game drop rates. One structure,
+reusable for all of them.</p>
+<h2>The syntax, decoded</h2>
+<p>A table is rows of cells separated by <code>|</code> (pipes), plus one special
+"divider" row that defines the columns:</p>
+<pre><code class="language-markdown">| Item    | Qty | Where          |
+| ------- | --- | -------------- |
+| Charger | 2   | Desk drawer    |
+| Batteries | 6 | Kitchen drawer |
+| Extension cord | 1 | Garage bin |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Qty</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charger</td>
+<td>2</td>
+<td>Desk drawer</td>
+</tr>
+<tr>
+<td>Batteries</td>
+<td>6</td>
+<td>Kitchen drawer</td>
+</tr>
+<tr>
+<td>Extension cord</td>
+<td>1</td>
+<td>Garage bin</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read the parts:</strong></p>
+<ul>
+<li><strong>Row 1</strong> — your column names.</li>
+<li><strong>Row 2</strong> — the divider. It only needs <code>|---|---|---|</code>, but you can
+  make it longer (<code>| :--- | ---: |</code>) to line things up.</li>
+<li><strong>Row 3+</strong> — one line per entry.</li>
+</ul>
+<p>You don't have to align pipes; most editors do it for you. Aligned is
+prettier to read as text, though, so it's worth the two seconds.</p>
+<h2>The divider is where alignment lives</h2>
+<pre><code class="language-markdown">| Left | Center | Right |
+| :--- | :---: | ---: |
+| left-side text | centered text | right-side text |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Left</th>
+<th style="text-align: center;">Center</th>
+<th style="text-align: right;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">left-side text</td>
+<td style="text-align: center;">centered text</td>
+<td style="text-align: right;">right-side text</td>
+</tr>
+</tbody>
+</table>
+<p><code>---</code> → left. <code>:---:</code> → centered. <code>---:</code> → right. Numbers read best
+right-aligned.</p>
+<h2>Three everyday tables to steal</h2>
+<p><strong>A simple budget:</strong></p>
+<pre><code class="language-markdown">| Category | Plan | Actual | Diff |
+| -------- | ---: | -----: | ---: |
+| Groceries | 450 | 512 | -62 |
+| Gas | 120 | 118 | 2 |
+| Fun | 80 | 45 | 35 |
+</code></pre>
+<p><strong>A small-business gear list:</strong></p>
+<pre><code class="language-markdown">| Item | Cost | Listed On | Status |
+| ---- | ---: | --------- | ------ |
+| Vintage lamp | 18 | Mar 2 | Listed |
+| Film camera | 42 | Mar 5 | Sold |
+| Box of comics | 25 | — | Probing |
+</code></pre>
+<p><strong>A weekly workout log:</strong></p>
+<pre><code class="language-markdown">| Day | Planned | Done | Notes |
+| ---- | ------- | :---: | ----- |
+| Mon | Legs | Yes | 4 sets |
+| Wed | Push | — | Rain |
+| Fri | Pull | | |
+</code></pre>
+<h2>Table rules and gotchas</h2>
+<ol>
+<li><strong>One line per row</strong>, always — no wrapped sentences inside a row.
+   Long notes belong below the table.</li>
+<li><strong>Same number of pipes on every line.</strong> Parsers survive missing
+   trailing pipes, but mismatched middle pipes will break the table.</li>
+<li><strong>Empty cells are fine</strong> — leave the space between pipes blank.</li>
+<li><strong>No blank lines inside a table.</strong> A blank line ends the table and
+   starts new content.</li>
+</ol>
+<h2>Try it now</h2>
+<ol>
+<li>Make a 3-column, 3-row inventory table.</li>
+<li>Re-align the pipes neatly (easiest with a monospaced editor).</li>
+<li>Add a Notes column and leave two cells empty.</li>
+</ol>
+<p>Next lesson: <a href="07-links-and-images.html">Links and images</a>.</p></article>
+<nav class="pager"><span>&larr; <a href="../lessons/05-todo-checkboxes.html">previous</a></span><span><a href="../lessons/07-links-and-images.html">next</a> &rarr;</span></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

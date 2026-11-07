@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 4 — Lists: Bullets, Numbers, and Nested Steps — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Lesson 4 — Lists: Bullets, Numbers, and Nested Steps</h1>
+<p>Lists are where Markdown starts paying rent. Grocery runs, care plans,
+packing bags, troubleshooting steps — anything with items belongs in a list.</p>
+<h2>Bulleted (unordered) lists</h2>
+<p>Start lines with <code>-</code> (hyphen, space). That's all:</p>
+<pre><code class="language-markdown">- Milk
+- Dog food
+- Coffee filters
+- Stamps
+</code></pre>
+<ul>
+<li>Milk</li>
+<li>Dog food</li>
+<li>Coffee filters</li>
+<li>Stamps</li>
+</ul>
+<p><code>*</code> and <code>+</code> also work, but <code>-</code> is cleanest to read and most common.</p>
+<h2>Numbered (ordered) lists</h2>
+<p>Start lines with a number, a dot, and a space:</p>
+<pre><code class="language-markdown">1. Preheat oven to 400°F.
+2. Season the chicken.
+3. Roast for 35 minutes.
+</code></pre>
+<ol>
+<li>Preheat oven to 400°F.</li>
+<li>Season the chicken.</li>
+<li>Roast for 35 minutes.</li>
+</ol>
+<p>Handy honesty: the numbers don't have to be correct. <code>3. 4. 5.</code> renders
+as 1, 2, 3 — the <em>order of the lines</em> decides the numbers, so copy-pasted
+lists never come out wrong.</p>
+<h2>Nested lists (sub-items)</h2>
+<p>Indent two spaces (some apps want four; two spaces works on GitHub):</p>
+<pre><code class="language-markdown">1. Get the car ready
+   - Check tire pressure
+   - Top off wiper fluid
+2. Check in
+   - License
+   - Insurance card
+   - Clinic card
+</code></pre>
+<ol>
+<li>Get the car ready
+   - Check tire pressure
+   - Top off wiper fluid</li>
+<li>Check in
+   - License
+   - Insurance card
+   - Clinic card</li>
+</ol>
+<p>You can mix bullet types when nesting: numbers for main steps, hyphens
+for details. That mixing is a driver's-license-day classic.</p>
+<h2>Separating steps from stuff</h2>
+<p>This distinction is the whole game:</p>
+<ul>
+<li><strong>Numbered lists</strong> mean <em>order matters</em> — do step 1 before step 2.</li>
+<li><strong>Bulleted lists</strong> mean <em>order doesn't matter</em> — it's a pile of stuff.</li>
+</ul>
+<p>If your "steps" are bullets, a reader may do them in the wrong order.
+If your "stuff" is numbered, a reader may think there's a required
+sequence. Choose on purpose.</p>
+<h2>Try it now</h2>
+<ol>
+<li>Make a 4-item grocery list with <code>-</code>.</li>
+<li>Make a 3-step bedtime routine with <code>1. 2. 3.</code>.</li>
+<li>Nest two sub-items under step 2, indented two spaces.</li>
+</ol>
+<p>Next lesson: <a href="05-todo-checkboxes.html">To-do checkboxes</a>.</p></article>
+<nav class="pager"><span>&larr; <a href="../lessons/03-bold-italic-and-emphasis.html">previous</a></span><span><a href="../lessons/05-todo-checkboxes.html">next</a> &rarr;</span></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

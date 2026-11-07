@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Common-Mistakes Gallery — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="index.html">Home</a> · <a href="cheat-sheet.html">Cheat sheet</a> · <a href="common-mistakes.html" aria-current="page">Mistakes gallery</a> · <a href="walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>The Common-Mistakes Gallery</h1>
+<p>Every entry below is a real mistake that renders <em>wrong</em> on GitHub and
+almost every Markdown app. Each one shows the broken input, the
+symptom you'll see, and the one-move fix. Use this as a diagnosis
+chart when something looks sideways.</p>
+<hr />
+<h2>1 — The missing space after <code>#</code></h2>
+<pre><code class="language-markdown">#My Heading
+</code></pre>
+<p><strong>Symptom:</strong> renders as literal text with a hash in front of it.</p>
+<p><strong>Fix:</strong> add a space: <code># My Heading</code>. The <code>#</code> must be followed by a
+space to become a heading.</p>
+<hr />
+<h2>2 — Bold with spaces inside</h2>
+<pre><code class="language-markdown">** bold text **
+</code></pre>
+<p><strong>Symptom:</strong> asterisks show as asterisks. Nothing bolds.</p>
+<p><strong>Fix:</strong> hug the text: <code>**bold text**</code>. Spaces inside the markers
+break them in nearly every renderer.</p>
+<hr />
+<h2>3 — List glued to the paragraph</h2>
+<pre><code class="language-markdown">Here is my list of steps:
+- Brush teeth
+- Floss
+</code></pre>
+<p><strong>Symptom:</strong> this <em>works</em> on GitHub, but many stricter parsers (older
+tools, some static-site generators) run the items into the paragraph
+as one line instead of list items.</p>
+<p><strong>Fix:</strong> put a blank line between the sentence and the list. Blank
+lines are free.</p>
+<hr />
+<h2>4 — Wrong list-break style</h2>
+<pre><code class="language-markdown">1. Step one
+2. Step two
+Sentence after the list.
+</code></pre>
+<p><strong>Symptom:</strong> that trailing sentence renders as paragraph — fine — but
+if you <em>wanted</em> it inside item 2 you'll get two separate blocks.</p>
+<p><strong>Fix:</strong> indent the continuation line two spaces:</p>
+<pre><code class="language-markdown">2. Step two
+   continued text under item two
+</code></pre>
+<hr />
+<h2>5 — Table with mismatched pipes</h2>
+<pre><code class="language-markdown">| Item | Qty | Notes |
+| --- | --- |
+| Lamp | 2 | garage |
+</code></pre>
+<p><strong>Symptom:</strong> header row renders as one column and then the table
+splits, or text renders with pipes everywhere.</p>
+<p><strong>Fix:</strong> one divider <code>|</code> per column, every row:</p>
+<pre><code class="language-markdown">| Item | Qty | Notes |
+| --- | --- | --- |
+| Lamp | 2 | garage |
+</code></pre>
+<hr />
+<h2>6 — Line break swallowed by the paragraph rule</h2>
+<pre><code class="language-markdown">Line one.
+Line two.
+</code></pre>
+<p><strong>Symptom:</strong> renders as <code>Line one. Line two.</code> on one line.</p>
+<p><strong>Fix:</strong> either put a blank line between them (paragraphs — usually
+what you want), or end line one with two trailing spaces or a <code>\</code> for
+a hard break inside a paragraph.</p>
+<hr />
+<h2>7 — Nested list with wrong indent</h2>
+<pre><code class="language-markdown">- Outer item
+    - Inner item (4 spaces)
+  - Inner item (2 spaces)
+</code></pre>
+<p><strong>Symptom:</strong> usually renders fine, but some parsers treat four-space
+inner lines as code blocks instead of list items.</p>
+<p><strong>Fix:</strong> use two spaces for nesting — the lowest common denominator:</p>
+<pre><code class="language-markdown">- Outer item
+  - Inner item
+</code></pre>
+<hr />
+<h2>8 — Code fence left unclosed</h2>
+<pre><code>```
+print(&quot;hello&quot;)
+</code></pre>
+<p><strong>Symptom:</strong> everything after the opening fence turns into a code
+block — the rest of the document looks like one giant code sample.</p>
+<p><strong>Fix:</strong> each <code>opener needs a</code> closer on its own line. Count
+your fences in pairs.</p>
+<hr />
+<h2>9 — Broken relative links</h2>
+<pre><code class="language-markdown">See [my notes](notes.md) for details.
+</code></pre>
+<p>That link works from <code>README.md</code> at the project root but 404s from
+<code>docs/plan.md</code>, which needs <code>../notes.md</code>. (The link above is a
+deliberate example — it intentionally points at a file that is not
+here, which is exactly the mistake it's teaching.)</p>
+<p><strong>Fix relative-path math once:</strong> the path in <code>( )</code> is counted from
+where the file <em>siting</em> lives, not from your browser or your project
+root. <code>./</code> = this folder. <code>../</code> = one folder up.</p>
+<hr />
+<h2>10 — Checkbox flavor: <code>[X]</code> or <code>[x ]</code></h2>
+<pre><code class="language-markdown">- [X] caps — some parsers miss it
+- [x ] stray space — almost all parsers miss it
+- [x] correct
+</code></pre>
+<p><strong>Symptom:</strong> "done" items that don't check off.</p>
+<p><strong>Fix:</strong> always the exact string <code>[x]</code> (lowercase, no inner space) or
+<code>[ ]</code> (exactly one inner space) for open items.</p>
+<hr />
+<h2>The five-second debug checklist</h2>
+<p>When markdown breaks, run down these in order — 90% of problems
+die at step 2:</p>
+<ol>
+<li><strong>Blank line?</strong> — between blocks of different types (heading, list,
+   table, paragraph, fence).</li>
+<li><strong>Space after the marker?</strong> — <code>#</code>, <code>-</code>, <code>1.</code>, <code>&gt;</code>.</li>
+<li><strong>Same pipe count in the table?</strong></li>
+<li><strong>Fences paired?</strong> — count your ``` in twos.</li>
+<li><strong>Path relative to the file writing it?</strong></li>
+</ol>
+<p><em>Found a mistake not in this gallery? Fix it and send it our way —
+this file is MIT-licensed like everything here.</em></p></article>
+<nav class="pager"><span>&larr; <a href="cheat-sheet.html">previous</a></span><span></span></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

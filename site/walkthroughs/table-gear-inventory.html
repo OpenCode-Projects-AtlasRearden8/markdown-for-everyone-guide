@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walkthrough — A Gear Inventory Table for a Small Resale Business — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html" aria-current="page">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Walkthrough — A Gear Inventory Table for a Small Resale Business</h1>
+<p>Build a real table, then grow it into a mini-document. This uses
+reselling as the example, but the pattern fits budgets, workout
+logs, plant care, or anything with rows.</p>
+<h2>Step 1 — Start with three columns</h2>
+<pre><code class="language-markdown">| Item | Paid | Status |
+| ---- | ---- | ------ |
+| Vintage lamp | 18 | Listed |
+| Film camera | 42 | Sold |
+| Box of comics | 25 | Probing |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Paid</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vintage lamp</td>
+<td>18</td>
+<td>Listed</td>
+</tr>
+<tr>
+<td>Film camera</td>
+<td>42</td>
+<td>Sold</td>
+</tr>
+<tr>
+<td>Box of comics</td>
+<td>25</td>
+<td>Probing</td>
+</tr>
+</tbody>
+</table>
+<p>Three columns is the sweet spot to start — enough structure to be
+useful, not so much that rows become essays.</p>
+<h2>Step 2 — Widen it when you need more</h2>
+<p>Add columns by extending the divider row and every data row:</p>
+<pre><code class="language-markdown">| Item | Paid | Listed On | Status | Notes |
+| ---- | ---: | --------- | ------ | ----- |
+| Vintage lamp | 18 | Mar 2 | Listed | Needs shade |
+| Film camera | 42 | Mar 5 | Sold | 24 margin |
+| Box of comics | 25 | — | Probing | Check grading |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Paid</th>
+<th>Listed On</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vintage lamp</td>
+<td style="text-align: right;">18</td>
+<td>Mar 2</td>
+<td>Listed</td>
+<td>Needs shade</td>
+</tr>
+<tr>
+<td>Film camera</td>
+<td style="text-align: right;">42</td>
+<td>Mar 5</td>
+<td>Sold</td>
+<td>24 margin</td>
+</tr>
+<tr>
+<td>Box of comics</td>
+<td style="text-align: right;">25</td>
+<td>—</td>
+<td>Probing</td>
+<td>Check grading</td>
+</tr>
+</tbody>
+</table>
+<p>Alignment choices: <code>Paid</code> is right-aligned (<code>---:</code>) so digits line
+up; <code>Listed On</code> and <code>Notes</code> are left; <code>Status</code> is centered.</p>
+<h2>Step 3 — Add a totals line</h2>
+<p>Markdown tables don't auto-sum, and that's fine — add a <strong>Total</strong>
+row and do the math once:</p>
+<pre><code class="language-markdown">**Invested:** $85 across 3 items · **Recovered:** $66 · **Margin:** -19
+</code></pre>
+<p>Bold label, then small facts. One line, not a paragraph.</p>
+<h2>Step 4 — Context below the table</h2>
+<p>Tables carry facts; paragraphs carry <em>why</em>. Add short paragraphs:</p>
+<pre><code class="language-markdown">Probing = listed on a single marketplace to test price without
+paying a second listing fee.
+
+Rule for this stack: nothing gets listed at a loss unless it's
+been sitting 60+ days.
+</code></pre>
+<h2>Step 5 — Wrap it in a README</h2>
+<p>Turn everything into a file GitHub (or a notes app) can present:</p>
+<pre><code class="language-markdown"># Gear Inventory
+
+Tracking what we bought, listed, and sold this season.
+
+## Status
+
+| Item | Paid | Listed On | Status |
+| ---- | ---: | --------- | ------ |
+| Vintage lamp | 18 | Mar 2 | Listed |
+| Film camera | 42 | Mar 5 | Sold |
+| Box of comics | 25 | — | Probing |
+
+## Notes
+
+Probing = single-marketplace listing to test price.
+
+## Related
+
+- [Markdown cheat sheet](../cheat-sheet.md)
+- [Common mistakes](../common-mistakes.md)
+</code></pre>
+<p>That's a document you could paste straight onto GitHub today.</p>
+<h2>Sanity checklist before you publish any table</h2>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled aria-label="open task"> Same number of inner pipes on every row</li>
+<li class="task-list-item"><input type="checkbox" disabled aria-label="open task"> No blank line inside the table</li>
+<li class="task-list-item"><input type="checkbox" disabled aria-label="open task"> Numbers right-aligned</li>
+<li class="task-list-item"><input type="checkbox" disabled aria-label="open task"> Empty cells are just blank (never <code>-</code> unless you mean "no data")</li>
+<li class="task-list-item"><input type="checkbox" disabled aria-label="open task"> A short paragraph below the table for the <em>why</em></li>
+</ul>
+<h2>Variation to try</h2>
+<p>Add a "Source" column values like <code>Estate sale</code>, <code>Thrift</code>,
+<code>Buy Nothing</code> — a month of rows later, that column tells you where
+your money is best spent.</p>
+<p>Back to all lessons: <a href="../index.html">docs README</a></p></article>
+<nav class="pager"></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

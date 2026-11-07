@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 3 — Bold, Italic, and Emphasis — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Lesson 3 — Bold, Italic, and Emphasis</h1>
+<p>Small touches, big clarity. This is the shortest lesson because it's the
+easiest — just four patterns you'll use forever.</p>
+<h2>The four patterns</h2>
+<pre><code class="language-markdown">**Bold**              → **Bold**
+*Italic*              → *Italic*
+***Bold and italic*** → ***Bold and italic***
+~~Strikethrough~~     → ~~Strikethrough~~
+</code></pre>
+<p>Rendered: <strong>Bold</strong>, <em>Italic</em>, <strong><em>Bold and italic</em></strong>, ~~Strikethrough~~.</p>
+<p>You can also use underscores (<code>_like this_</code>), but asterisks are easier to
+see and type on most keyboards. Pick one style and stick with it.</p>
+<h2>Where emphasis actually helps</h2>
+<p>Emphasis is not for decoration. It's a pointing finger. Use it when a
+reader skimming your text needs one thing to pop out:</p>
+<ul>
+<li><strong>Deadlines:</strong> "Submit by <strong>Friday, May 9</strong>."</li>
+<li><strong>Warnings:</strong> "Never share the backup key."</li>
+<li><strong>Key terms when teaching:</strong> a <em>hierarchy</em> is a folder tree.</li>
+<li>~~Done~~ items you want to keep visible but crossed out.</li>
+</ul>
+<h2>A habit worth copying: the "why" line</h2>
+<p>Many note-takers start documents with one bold line explaining the
+document's purpose. Six months later, that one line is priceless:</p>
+<pre><code class="language-markdown">**Why this file exists:** Tracking our small-business gear so tax
+season takes 2 hours instead of 2 days.
+</code></pre>
+<h2>Small trap, easy fix</h2>
+<p>If bolding "doesn't work," the usual culprit is a space inside the
+marks: <code>** bold **</code> renders literally, but <code>**bold**</code> works. The marks
+must hug the text tight, with no spaces inside.</p>
+<p>Common failure:</p>
+<pre><code class="language-markdown">** Good **   → renders with asterisks showing
+**Good**     → renders as bold
+</code></pre>
+<p>And don't accidentally double-space between marks and text. Markdown
+parsers at GitHub and most apps agree on this, so fix it once and it
+fixes everywhere.</p>
+<h2>Try it now</h2>
+<ol>
+<li>In <code>notes.md</code>, bold one deadline.</li>
+<li>Italicize one term you're learning.</li>
+<li>Strikethrough one item you already finished.</li>
+</ol>
+<p>Next lesson: <a href="04-lists.html">Lists: bullets, numbers, and nesting</a>.</p></article>
+<nav class="pager"><span>&larr; <a href="../lessons/02-headings-and-paragraphs.html">previous</a></span><span><a href="../lessons/04-lists.html">next</a> &rarr;</span></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

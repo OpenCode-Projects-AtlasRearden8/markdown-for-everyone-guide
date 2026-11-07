@@ -1,0 +1,210 @@
+/* markdown-for-everyone-guide — site stylesheet
+   No fonts loaded from network, no analytics, no external requests. */
+
+:root {
+  --ink: #1f2430;
+  --muted: #5b6472;
+  --paper: #fdfdfa;
+  --panel: #f2f4ec;
+  --line: #d8dcd2;
+  --gold: #b07713;
+  --accent: #2b5f46;
+  --accent-soft: #e4efe7;
+  --danger: #8a2f2f;
+  --code-bg: #eef0ea;
+  --maxw: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.65;
+}
+
+/* Layout: masthead, content, footer */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header.site {
+  border-bottom: 3px double var(--line);
+  padding: 1.4rem 0 1rem;
+}
+
+header.site h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  letter-spacing: 0.02em;
+}
+
+header.site p {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+main { padding: 1.6rem 0 2.4rem; }
+
+footer.site {
+  border-top: 3px double var(--line);
+  padding: 1rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer.site a { color: var(--muted); }
+
+/* Navigation between lessons */
+nav.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.88rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  margin-top: 2.2rem;
+}
+
+nav.pager a { color: var(--accent); }
+
+/* Lesson index cards */
+ol.toc {
+  padding-left: 1.3rem;
+}
+
+li.toc-item { margin: 0.55rem 0; }
+
+li.toc-item em {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Headings */
+h1, h2, h3, h4 { line-height: 1.3; }
+
+h1 {
+  font-size: 1.7rem;
+  margin: 2rem 0 1rem;
+}
+
+article > h1:first-child { margin-top: 0.6rem; }
+
+h2 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.6rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.45rem;
+}
+
+/* Body text */
+p { margin: 0.7rem 0; }
+
+a { color: var(--accent); }
+
+ul, ol { margin: 0.7rem 0; padding-left: 1.6rem; }
+
+li { margin: 0.28rem 0; }
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.45rem 1rem;
+  border-left: 4px solid var(--gold);
+  background: var(--panel);
+  color: #3d4450;
+}
+
+blockquote p { margin: 0.25rem 0; }
+
+hr {
+  border: 0;
+  border-top: 1px dashed var(--line);
+  margin: 2rem 0;
+}
+
+strong { color: inherit; }
+
+/* Task list checkboxes rendered by python-markdown */
+input[type="checkbox"] {
+  margin-right: 0.45rem;
+  accent-color: var(--accent);
+  transform: translateY(2px);
+}
+
+li.task-list-item { list-style-type: none; }
+
+ul.contains-task-list,
+ul.task-list { padding-left: 0.4rem; }
+
+/* Code */
+code, pre, kbd {
+  font-family: 'Cascadia Mono', Consolas, 'Andale Mono', monospace;
+}
+
+code {
+  background: var(--code-bg);
+  padding: 0.1rem 0.32rem;
+  border-radius: 3px;
+  font-size: 0.87em;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  line-height: 1.5;
+  font-size: 0.86rem;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.1rem 0;
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+/* Images */
+img { max-width: 100%; height: auto; }
+
+/* Small-screen breathing room */
+@media (max-width: 520px) {
+  body { font-size: 0.98rem; }
+  h1 { font-size: 1.4rem; }
+}

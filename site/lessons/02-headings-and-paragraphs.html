@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 2 — Headings and Paragraphs: Giving Notes Shape — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Lesson 2 — Headings and Paragraphs: Giving Notes Shape</h1>
+<p>Formatting isn't decoration — it's wayfinding. Headings tell your future
+self (and anyone you share with) what matters and where things live.</p>
+<h2>Headings: six sizes, one character</h2>
+<p>Put <code>#</code> (a hash) and a space before a line of text:</p>
+<pre><code class="language-markdown"># Level 1 — biggest
+## Level 2 — section
+### Level 3 — sub-section
+#### Level 4
+##### Level 5
+###### Level 6 — smallest
+</code></pre>
+<p>Renders like:</p>
+<h1>Level 1 — biggest</h1>
+<h2>Level 2 — section</h2>
+<h3>Level 3 — sub-section</h3>
+<p><strong>Three rules that save you trouble:</strong></p>
+<ol>
+<li>One <code>#</code> heading per page. It's the document title.</li>
+<li>Don't skip levels (go <code>##</code> then <code>###</code>, not <code>##</code> then <code>####</code>).</li>
+<li>The space after <code>#</code> is required. <code>#Nope</code> is not a heading.</li>
+</ol>
+<h2>Paragraphs: the blank line is everything</h2>
+<p>Markdown has one paragraph rule, and it's strict:</p>
+<pre><code class="language-markdown">This is one paragraph.
+
+This is a second paragraph.
+
+But this line
+and this line
+will be glued into the same paragraph.
+</code></pre>
+<p>Why? Markdown is built from plain text. A single line break is invisible
+to the reader; a <em>blank line</em> is the only way to start a new paragraph.</p>
+<p><strong>The fix for the glued-lines problem:</strong> end the previous line with two
+spaces, or (in most apps) a backslash <code>\</code>. Better yet, don't fight it —
+just write one idea per paragraph and use blank lines generously.</p>
+<h2>Line-by-line lists of thoughts? Use lists</h2>
+<p>If you find yourself using two-space line breaks for a "list of things,"
+that's a sign it should be an actual list:</p>
+<pre><code class="language-markdown">- Monday: call the clinic
+- Tuesday: refill prescription
+- Wednesday: water the plants
+</code></pre>
+<p>You'll meet lists properly in Lesson 4 — this is just a preview.</p>
+<h2>Real life example: a jump-rope routine</h2>
+<pre><code class="language-markdown"># Jump-Rope Plan
+
+**Goal:** 5 minutes unbroken by June.
+
+## This week
+
+Mon and Wed: 3 sets of 60 seconds, rest 60 seconds between.
+
+Fri: try 90 seconds straight, even slowly.
+
+## After this week
+
+Add 30 seconds per set. Rest is allowed — slow beats nothing.
+</code></pre>
+<p>Notice: <code>#</code> title, <code>##</code> sections, a bold goal line. That's a document
+anyone can follow with zero explanation.</p>
+<h2>Try it now</h2>
+<ol>
+<li>Add a <code>##</code> section to <code>notes.md</code> called <code>This Week</code>.</li>
+<li>Under it, write two short paragraphs separated by a blank line.</li>
+<li>Glue test: write two lines with no blank line between them and see
+   them join. Add the blank line. Watch them separate.</li>
+</ol>
+<p>Next lesson: <a href="03-bold-italic-and-emphasis.html">Bold, italic, and emphasis</a>.</p></article>
+<nav class="pager"><span>&larr; <a href="../lessons/01-what-is-markdown.html">previous</a></span><span><a href="../lessons/03-bold-italic-and-emphasis.html">next</a> &rarr;</span></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>

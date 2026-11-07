@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 7 — Links, Images, and Where Files Live — Markdown for Everyone</title>
+<meta name="description" content="Plain-English Markdown lessons for everyday life: notes, to-do lists, tables, and READMEs. No tracking, fully offline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>Markdown for Everyone</h1>
+    <p>Nine tiny lessons · a life skill · no tracking, fully offline</p>
+    <nav aria-label="Site sections"><p>
+    <a href="../index.html">Home</a> · <a href="../cheat-sheet.html">Cheat sheet</a> · <a href="../common-mistakes.html">Mistakes gallery</a> · <a href="../walkthroughs/checkboxes-week-plan.html">Walkthrough 1</a> · <a href="../walkthroughs/table-gear-inventory.html">Walkthrough 2</a>
+    </p></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Lesson 7 — Links, Images, and Where Files Live</h1>
+<p>Links and images are how Markdown documents reach out to the world —
+to other files, to websites, and to your own screenshots.</p>
+<h2>The link syntax</h2>
+<p>Square brackets for the label, parentheses for the address, no space
+between them:</p>
+<pre><code class="language-markdown">[Click here for the Markdown cheat sheet](../cheat-sheet.md)
+</code></pre>
+<p>Renders as: <a href="../cheat-sheet.html">Click here for the Markdown cheat sheet</a></p>
+<p>Part of speech matters:</p>
+<ul>
+<li><code>[label]</code> — what the reader sees. Write it like a signpost,
+  not "click here" on loop.</li>
+<li><code>(address)</code> — where the link goes. Can be a web address,
+  a local file, or a section heading.</li>
+</ul>
+<h2>Linking to headings inside your own document</h2>
+<p>Most Markdown renderers auto-generate anchors from headings:</p>
+<pre><code class="language-markdown">See [the mistakes gallery](#the-gallery) below for trap #1.
+</code></pre>
+<p>Use <code>-</code> instead of spaces, all lowercase, drop punctuation. It's a
+little fragile across renderers, so test before publishing.</p>
+<h2>Images: same shape, one <code>!</code> prefix</h2>
+<pre><code class="language-markdown">![A photo of my desk setup](desk.jpg)
+</code></pre>
+<ul>
+<li><code>!</code> before the brackets — that's the whole difference from a link.</li>
+<li><code>[brackets]</code> become <em>alt text</em> — describe the image for people
+  using screen readers and for you when the link breaks.</li>
+<li><code>(parentheses)</code> take the image's location.</li>
+</ul>
+<p>Real example:</p>
+<pre><code class="language-markdown">![My workout log wall calendar for March](calendar-march.png)
+</code></pre>
+<h2>Where files live (the part that trips everyone up)</h2>
+<p>The <code>(address)</code> is a path <strong>relative to the file you're writing in</strong>:</p>
+<pre><code class="language-text">my-project/
+├── README.md
+├── images/
+│   └── calendar.png
+└── docs/
+    └── plan.md
+</code></pre>
+<ul>
+<li>From <code>README.md</code>: <code>images/calendar.png</code></li>
+<li>From <code>docs/plan.md</code>: <code>../images/calendar.png</code></li>
+</ul>
+<p><code>..</code> means "up one folder." Two dots up would be <code>../..</code>. Spell paths
+out at the moment you write them; fixing a dozen broken links later
+is the boring kind of evening.</p>
+<h2>Making an image a clickable link</h2>
+<p>Nest an image inside a link — brackets' content can be anything:</p>
+<pre><code class="language-markdown">[![Open my resume in PDF](resume-preview.png)](resume.pdf)
+</code></pre>
+<h2>Try it now</h2>
+<ol>
+<li>Link to one website you visit daily.</li>
+<li>Add one image reference (even if the file doesn't exist yet —
+   note the label question: what's the missing image's alt text say?).</li>
+<li>Link to a <code>##</code> heading inside the same document.</li>
+</ol>
+<p>Next lesson: <a href="08-quotes-code-and-extras.html">Quotes, code, and extras</a>.</p></article>
+<nav class="pager"><span>&larr; <a href="../lessons/06-tables.html">previous</a></span><span><a href="../lessons/08-quotes-code-and-extras.html">next</a> &rarr;</span></nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Part of <a href="https://dylanasdale.github.io">Dylan Asdale's guides</a> ·
+    markdown-for-everyone-guide · MIT licensed ·
+    Copyright (c) 2026 Asdale Dynamics, LLC</p>
+  </div>
+</footer>
+</body>
+</html>
